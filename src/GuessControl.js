@@ -16,7 +16,7 @@ const GuessControl = ({ onGuess }) => {
   };
 
   return (
-    <div>
+    <form onSubmit={onSubmitGuess}>
       <input
         type="number"
         min="0" 
@@ -24,8 +24,8 @@ const GuessControl = ({ onGuess }) => {
         value={currentGuess}
         onChange={handleInputChange}
       />
-      <Button onClick={onSubmitGuess}>Submit Guess</Button>
-    </div>
+      <Button type="submit">Submit Guess</Button>
+    </form>
   );
 }
 
